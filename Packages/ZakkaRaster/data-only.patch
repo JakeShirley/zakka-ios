@@ -1,0 +1,17 @@
+--- a/crates/c-api/lib.rs
++++ b/crates/c-api/lib.rs
+@@ -118,9 +118,11 @@
+ /// Should be destroyed via #resvg_options_destroy.
+ #[no_mangle]
+ pub extern "C" fn resvg_options_create() -> *mut resvg_options {
+-    Box::into_raw(Box::new(resvg_options {
+-        options: usvg::Options::default(),
+-    }))
++    // Zakka resolves authenticated media on the Swift side. Embedded SVGs and
++    // data URIs are supported; never let a document open a filesystem path.
++    let mut options = usvg::Options::default();
++    options.image_href_resolver.resolve_string = Box::new(|_, _| None);
++    Box::into_raw(Box::new(resvg_options { options }))
+ }
+ 
+ #[inline]

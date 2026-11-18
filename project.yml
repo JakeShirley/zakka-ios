@@ -5,6 +5,8 @@ options:
 packages:
   ZakkaCore:
     path: Packages/ZakkaCore
+  ZakkaRaster:
+    path: Packages/ZakkaRaster
 settings:
   base:
     SWIFT_VERSION: "6.0"
@@ -18,6 +20,7 @@ targets:
     sources: [App]
     dependencies:
       - package: ZakkaCore
+      - package: ZakkaRaster
     info:
       path: App/Info.plist
       properties:

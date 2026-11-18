@@ -1,4 +1,5 @@
 import Foundation
+import CoreText
 import ImageIO
 import UniformTypeIdentifiers
 
@@ -12,6 +13,9 @@ enum ArtworkMedia {
     /// Keep auth and redirects in ZakkaClient. Only follow variants belonging to the requested asset.
     static func fetch(_ resource: ArtworkPlan.Resource, thumbnail: Bool, edge: Int,
                       read: @Sendable (String) async throws -> Data) async throws -> String {
+        // resvg has no Apple Color Emoji bitmap font loader. Preserve the existing
+        // system-glyph fallback without copying a system font into the app.
+        if let glyph = resource.glyph { return try emoji(glyph, edge: min(edge, 240)) }
         if let path = resource.path {
             let data = try await read(path)
             try Task.checkCancellation()
@@ -48,6 +52,26 @@ enum ArtworkMedia {
             }
         }
         throw ArtworkError.imageUnavailable
+    }
+
+    private static func emoji(_ glyph: String, edge: Int) throws -> String {
+        guard let ctx = CGContext(data: nil, width: edge, height: edge, bitsPerComponent: 8, bytesPerRow: edge * 4,
+                                  space: CGColorSpaceCreateDeviceRGB(), bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue)
+        else { throw ArtworkError.imageUnavailable }
+        let size = CGFloat(edge)
+        let font = CTFontCreateWithName("AppleColorEmoji" as CFString, size * 0.8, nil)
+        let text = NSAttributedString(string: glyph, attributes: [NSAttributedString.Key(kCTFontAttributeName as String): font])
+        let line = CTLineCreateWithAttributedString(text)
+        let bounds = CTLineGetImageBounds(line, ctx)
+        guard !bounds.isEmpty else { throw ArtworkError.imageUnavailable }
+        ctx.textPosition = CGPoint(x: size / 2 - bounds.midX, y: size / 2 - bounds.midY)
+        CTLineDraw(line, ctx)
+        let bytes = NSMutableData()
+        guard let image = ctx.makeImage(), let dest = CGImageDestinationCreateWithData(bytes, UTType.png.identifier as CFString, 1, nil)
+        else { throw ArtworkError.imageUnavailable }
+        CGImageDestinationAddImage(dest, image, nil)
+        guard CGImageDestinationFinalize(dest) else { throw ArtworkError.imageUnavailable }
+        return "data:image/png;base64," + (bytes as Data).base64EncodedString()
     }
 
     static func dataURI(_ data: Data, edge: Int, allowSVG: Bool) throws -> String {

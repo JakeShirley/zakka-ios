@@ -22,9 +22,9 @@ globalThis.atob ??= (encoded: string): string => {
 const safeID = (id: string | undefined) => id && /^[a-zA-Z0-9_-]+$/.test(id) ? id : null;
 
 export function plan(json: string, editor: boolean, thumbnail: boolean): string {
-  const resources: { asset?: string; path?: string }[] = [];
+  const resources: { asset?: string; path?: string; glyph?: string }[] = [];
   const indices = new Map<string, number>();
-  const href = (kind: "asset" | "path", value: string | null | undefined) => {
+  const href = (kind: "asset" | "path" | "glyph", value: string | null | undefined) => {
     if (!value) return null;
     const key = `${kind}:${value}`;
     if (!indices.has(key)) {
@@ -49,7 +49,8 @@ export function plan(json: string, editor: boolean, thumbnail: boolean): string 
       return href("path", slug && `/backgrounds/builtin/${slug}/${variant}`);
     },
     resolveStickerHref: l => isCustomStickerId(l.stickerId)
-      ? href("path", `/custom-stickers/${l.stickerId.slice("custom:".length)}/content`) : null,
+      ? href("path", `/custom-stickers/${l.stickerId.slice("custom:".length)}/content`)
+      : !catalog.stickers[l.stickerId] ? href("glyph", catalog.glyphs[l.stickerId]) : null,
     resolveStickerSvg: l => {
       const icon = catalog.stickers[l.stickerId];
       if (icon) {
@@ -59,8 +60,7 @@ export function plan(json: string, editor: boolean, thumbnail: boolean): string 
           .replace(/\bid="([^"]+)"/g, (_, id) => `id="${prefix}${id}"`)
           .replace(/#([\w:-]+)/g, (original, id) => ids.has(id) ? `#${prefix}${id}` : original) };
       }
-      const glyph = catalog.glyphs[l.stickerId];
-      return glyph ? { viewBox: "0 0 100 100", body: `<text x="50" y="83" text-anchor="middle" font-family="Apple Color Emoji" font-size="84">${glyph}</text>` } : null;
+      return null;
     },
   });
   let svg: string, omitted = 0;

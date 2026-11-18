@@ -18,7 +18,7 @@ There are no embedded server credentials or demo fixtures. A fresh account start
 - Photo library, album browsing/creation, adding photos to albums, image details, and foreground uploads from Photos or Files. Image Grid builds an independent PNG contact sheet; it does not mutate books.
 - Server export creation, polling, file download and the iPad share sheet. Settings shows the connected account and server runtime.
 
-The [rendering bridge](engine/README.md) runs pinned Zakka editor-core in JavaScriptCore. The client rasterizes its SVG with WebKit rather than the roadmap's resvg XCFramework. The bundled fonts and sticker set are partial; final exports are rendered by the server, not from a screen capture.
+The [rendering bridge](engine/README.md) runs pinned Zakka editor-core in JavaScriptCore. The client rasterizes its SVG locally with resvg 0.45.1, shipped in a static XCFramework for iPad devices and simulators. The bundled fonts and sticker set are partial; final exports are rendered by the server, not from a screen capture.
 
 The roadmap's advanced photo effects, full decoration and map editors, layout catalog, parity/performance gates, Pencil Pro controls, multiple windows, integrations and TestFlight work are not complete. Uploads are foreground operations; there is no share extension, background upload queue or offline editing mode. The initial client uses a small hand-written API transport and an account-specific JSON metadata cache rather than generated endpoints and SwiftData.
 

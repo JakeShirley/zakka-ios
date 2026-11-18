@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10724C7163EFEEEFA0EA9B61 /* ZakkaRaster in Frameworks */ = {isa = PBXBuildFile; productRef = ABFA64C58129EEBF5C863EFE /* ZakkaRaster */; };
 		1FAA18E956369D99A4DCFF9D /* Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356AA044AEEEF58E49A03355 /* Export.swift */; };
 		273ABC2F809DA92F5A1C34AA /* ArtworkRaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1046D7E8CBDCBB0F2479C24A /* ArtworkRaster.swift */; };
 		2BE5F171BEC34C72713EDD64 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E5C44A914BB3EBAFA6579 /* Grid.swift */; };
@@ -51,6 +52,8 @@
 		567ED9167BE5E9E86CA2516F /* ZakkaPad.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ZakkaPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6289A3DE4CB82C24840927D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6EB0E4B25A4F499241C22466 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		788A70793CF5AD9D6DAF23E6 /* .gitattributes */ = {isa = PBXFileReference; path = .gitattributes; sourceTree = "<group>"; };
+		7EF493003F18805EC9ED8ACA /* ZakkaRaster */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ZakkaRaster; path = Packages/ZakkaRaster; sourceTree = SOURCE_ROOT; };
 		8C4C9BD46920828916BCA0B0 /* ArtworkPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkPipeline.swift; sourceTree = "<group>"; };
 		A34BBF6755D13D95F20CA5AA /* ZakkaPadUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ZakkaPadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C3B3C96135DC061CAB9A40 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -67,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB0A46A58541AC5F70723E7E /* ZakkaCore in Frameworks */,
+				10724C7163EFEEEFA0EA9B61 /* ZakkaRaster in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				3181046B200A4FC063F78607 /* ZakkaCore */,
+				7EF493003F18805EC9ED8ACA /* ZakkaRaster */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 		C62E8EFED4D911CFFB539208 /* Rendering */ = {
 			isa = PBXGroup;
 			children = (
+				788A70793CF5AD9D6DAF23E6 /* .gitattributes */,
 				156C8B06D73F1399043B7E4D /* ArtworkEngine.swift */,
 				205FBD42C43ED88ADBA8A1B5 /* ArtworkMedia.swift */,
 				8C4C9BD46920828916BCA0B0 /* ArtworkPipeline.swift */,
@@ -177,6 +183,7 @@
 			name = ZakkaPad;
 			packageProductDependencies = (
 				D1FBFABA99607AA78C6ED005 /* ZakkaCore */,
+				ABFA64C58129EEBF5C863EFE /* ZakkaRaster */,
 			);
 			productName = ZakkaPad;
 			productReference = 567ED9167BE5E9E86CA2516F /* ZakkaPad.app */;
@@ -207,6 +214,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				FCE269955E32D98EF112259D /* XCLocalSwiftPackageReference "Packages/ZakkaCore" */,
+				B8DCA7F55909A91893768D32 /* XCLocalSwiftPackageReference "Packages/ZakkaRaster" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6ABC1BC52C70831D5690674B /* Products */;
@@ -496,6 +504,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
+		B8DCA7F55909A91893768D32 /* XCLocalSwiftPackageReference "Packages/ZakkaRaster" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/ZakkaRaster;
+		};
 		FCE269955E32D98EF112259D /* XCLocalSwiftPackageReference "Packages/ZakkaCore" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Packages/ZakkaCore;
@@ -503,6 +515,10 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		ABFA64C58129EEBF5C863EFE /* ZakkaRaster */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ZakkaRaster;
+		};
 		D1FBFABA99607AA78C6ED005 /* ZakkaCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ZakkaCore;

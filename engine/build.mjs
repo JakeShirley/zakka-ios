@@ -3,6 +3,7 @@ import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from
 import { basename, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { build } from "esbuild";
+import { unpackTTF } from "./woff.mjs";
 
 process.chdir(fileURLToPath(new URL(".", import.meta.url)));
 const upstream = "https://github.com/JakeShirley/zakka.git";
@@ -45,6 +46,9 @@ const included = new Set(["roboto-400", "roboto-700", "baskervville-400", "baske
 const fonts = googleFonts.filter(f => included.has(basename(f.vendorPath, ".woff")));
 const fontMap = Object.fromEntries([...new Set(fonts.map(f => f.vendorPath))].map(path =>
   [path, readFileSync(`${core}/${path}`).toString("base64")]));
+for (const name of ["lato-400", "baskervville-400"]) {
+  writeFileSync(`${dest}/${name}.ttf`, unpackTTF(readFileSync(`${core}/vendor/fonts/google-fonts/${name}.woff`)));
+}
 mkdirSync(`${core}/src/generated`, { recursive: true });
 writeFileSync(`${core}/src/google-fonts.ts`, `export const googleFonts=${JSON.stringify(fonts)};`);
 writeFileSync(`${core}/src/generated/googleFonts.ts`,

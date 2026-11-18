@@ -5,6 +5,7 @@ struct ArtworkPlan: Decodable, Sendable {
     struct Resource: Decodable, Sendable {
         var asset: String?
         var path: String?
+        var glyph: String?
     }
     let svg: String
     let resources: [Resource]

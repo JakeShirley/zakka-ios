@@ -73,7 +73,7 @@ actor ArtworkPipeline {
     }
 
     private func load(_ resource: ArtworkPlan.Resource, client: ZakkaClient, thumbnail: Bool, edge: Int) async throws -> String {
-        let key = "\(resource.asset.map { "asset:\($0)" } ?? resource.path ?? ""):\(thumbnail):\(edge)" as NSString
+        let key = "\(resource.asset.map { "asset:\($0)" } ?? resource.glyph.map { "glyph:\($0)" } ?? resource.path ?? ""):\(thumbnail):\(edge)" as NSString
         let cache = caches.object(forKey: client)
         if let hit = cache?.media.object(forKey: key) { return hit as String }
         let uri = try await ArtworkMedia.fetch(resource, thumbnail: thumbnail, edge: edge) {
