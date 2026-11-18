@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10724C7163EFEEEFA0EA9B61 /* ZakkaRaster in Frameworks */ = {isa = PBXBuildFile; productRef = ABFA64C58129EEBF5C863EFE /* ZakkaRaster */; };
+		1FAA18E956369D99A4DCFF9D /* Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356AA044AEEEF58E49A03355 /* Export.swift */; };
+		273ABC2F809DA92F5A1C34AA /* ArtworkRaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1046D7E8CBDCBB0F2479C24A /* ArtworkRaster.swift */; };
+		2BE5F171BEC34C72713EDD64 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E5C44A914BB3EBAFA6579 /* Grid.swift */; };
+		34225ACDBBB0B4691AB0BE2F /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2189BD9872604B084794E0D /* Design.swift */; };
+		4B3B591881D648F31E6C9759 /* ArtworkEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156C8B06D73F1399043B7E4D /* ArtworkEngine.swift */; };
+		4E9B23739149C6DDB65C16C9 /* Editor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC8C9B03635209E54AE369 /* Editor.swift */; };
+		5A04F1CD908A035BC7B1850F /* ZakkaPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8DEF7BA2F9FCF5BF7BB3A5 /* ZakkaPad.swift */; };
+		6203CC2BA5F10077318535B5 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3B3C96135DC061CAB9A40 /* Settings.swift */; };
+		68FC4209F429D1897588EA8C /* ArtworkPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4C9BD46920828916BCA0B0 /* ArtworkPipeline.swift */; };
+		9C96C8BEA34F01A3B2CFB843 /* ZakkaArtwork.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E57BA4F3257FDA20E03F034 /* ZakkaArtwork.bundle */; };
+		A196B3B3E78209865ABA71AA /* ArtworkMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205FBD42C43ED88ADBA8A1B5 /* ArtworkMedia.swift */; };
+		A8FE45E56483DE6E69D1B4F3 /* Studio.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7D90AA43A0B485E6262DE9 /* Studio.swift */; };
+		B4B577827CA3FC2465AF179A /* PageArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E4803F394048923D0E0529 /* PageArtwork.swift */; };
+		C771932C4A111AA067B73F34 /* LiveStudioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7E4CA7409C96165200351 /* LiveStudioTests.swift */; };
+		DD9A3E552D0D0DEF7D286773 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C90ADDB7EA13BE7A702EED /* Assets.xcassets */; };
+		F6AAC9EBA223BD0A57B946CC /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC288333BA4B9FC96FEE8C26 /* Books.swift */; };
+		FB0A46A58541AC5F70723E7E /* ZakkaCore in Frameworks */ = {isa = PBXBuildFile; productRef = D1FBFABA99607AA78C6ED005 /* ZakkaCore */; };
+		FF70443EC822B2AA47517D09 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB0E4B25A4F499241C22466 /* Photos.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C3736C55EAA8BA4DA4DB53B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A28AC0C1D5907FD38E818D05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E65E9AADA89334EA64C65391;
+			remoteInfo = ZakkaPad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E57BA4F3257FDA20E03F034 /* ZakkaArtwork.bundle */ = {isa = PBXFileReference; lastKnownFileType = wrapper.cfbundle; path = ZakkaArtwork.bundle; sourceTree = "<group>"; };
+		0F6E5C44A914BB3EBAFA6579 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		1046D7E8CBDCBB0F2479C24A /* ArtworkRaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkRaster.swift; sourceTree = "<group>"; };
+		156C8B06D73F1399043B7E4D /* ArtworkEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkEngine.swift; sourceTree = "<group>"; };
+		205FBD42C43ED88ADBA8A1B5 /* ArtworkMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkMedia.swift; sourceTree = "<group>"; };
+		2BC7E4CA7409C96165200351 /* LiveStudioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStudioTests.swift; sourceTree = "<group>"; };
+		3181046B200A4FC063F78607 /* ZakkaCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ZakkaCore; path = Packages/ZakkaCore; sourceTree = SOURCE_ROOT; };
+		356AA044AEEEF58E49A03355 /* Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Export.swift; sourceTree = "<group>"; };
+		37DC8C9B03635209E54AE369 /* Editor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editor.swift; sourceTree = "<group>"; };
+		45C90ADDB7EA13BE7A702EED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		567ED9167BE5E9E86CA2516F /* ZakkaPad.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ZakkaPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6289A3DE4CB82C24840927D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6EB0E4B25A4F499241C22466 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		788A70793CF5AD9D6DAF23E6 /* .gitattributes */ = {isa = PBXFileReference; path = .gitattributes; sourceTree = "<group>"; };
+		7EF493003F18805EC9ED8ACA /* ZakkaRaster */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ZakkaRaster; path = Packages/ZakkaRaster; sourceTree = SOURCE_ROOT; };
+		8C4C9BD46920828916BCA0B0 /* ArtworkPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkPipeline.swift; sourceTree = "<group>"; };
+		A34BBF6755D13D95F20CA5AA /* ZakkaPadUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ZakkaPadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7C3B3C96135DC061CAB9A40 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		CC8DEF7BA2F9FCF5BF7BB3A5 /* ZakkaPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZakkaPad.swift; sourceTree = "<group>"; };
+		D5E4803F394048923D0E0529 /* PageArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageArtwork.swift; sourceTree = "<group>"; };
+		DF7D90AA43A0B485E6262DE9 /* Studio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Studio.swift; sourceTree = "<group>"; };
+		F2189BD9872604B084794E0D /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
+		FC288333BA4B9FC96FEE8C26 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A5A2497503F9145583D573B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB0A46A58541AC5F70723E7E /* ZakkaCore in Frameworks */,
+				10724C7163EFEEEFA0EA9B61 /* ZakkaRaster in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2309CACFA666EEC69D8CDB82 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				45C90ADDB7EA13BE7A702EED /* Assets.xcassets */,
+				FC288333BA4B9FC96FEE8C26 /* Books.swift */,
+				F2189BD9872604B084794E0D /* Design.swift */,
+				37DC8C9B03635209E54AE369 /* Editor.swift */,
+				356AA044AEEEF58E49A03355 /* Export.swift */,
+				0F6E5C44A914BB3EBAFA6579 /* Grid.swift */,
+				6289A3DE4CB82C24840927D9 /* Info.plist */,
+				6EB0E4B25A4F499241C22466 /* Photos.swift */,
+				C7C3B3C96135DC061CAB9A40 /* Settings.swift */,
+				DF7D90AA43A0B485E6262DE9 /* Studio.swift */,
+				CC8DEF7BA2F9FCF5BF7BB3A5 /* ZakkaPad.swift */,
+				C62E8EFED4D911CFFB539208 /* Rendering */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		28374591CD1A4FE60C25DBAB /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				3181046B200A4FC063F78607 /* ZakkaCore */,
+				7EF493003F18805EC9ED8ACA /* ZakkaRaster */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		4434652510A5F4FB94F682FF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2BC7E4CA7409C96165200351 /* LiveStudioTests.swift */,
+			);
+			name = UI;
+			path = Tests/UI;
+			sourceTree = "<group>";
+		};
+		6ABC1BC52C70831D5690674B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				567ED9167BE5E9E86CA2516F /* ZakkaPad.app */,
+				A34BBF6755D13D95F20CA5AA /* ZakkaPadUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C62E8EFED4D911CFFB539208 /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				788A70793CF5AD9D6DAF23E6 /* .gitattributes */,
+				156C8B06D73F1399043B7E4D /* ArtworkEngine.swift */,
+				205FBD42C43ED88ADBA8A1B5 /* ArtworkMedia.swift */,
+				8C4C9BD46920828916BCA0B0 /* ArtworkPipeline.swift */,
+				1046D7E8CBDCBB0F2479C24A /* ArtworkRaster.swift */,
+				D5E4803F394048923D0E0529 /* PageArtwork.swift */,
+				0E57BA4F3257FDA20E03F034 /* ZakkaArtwork.bundle */,
+			);
+			path = Rendering;
+			sourceTree = "<group>";
+		};
+		D06C7F87DCA4F88DFC14F53E = {
+			isa = PBXGroup;
+			children = (
+				2309CACFA666EEC69D8CDB82 /* App */,
+				28374591CD1A4FE60C25DBAB /* Packages */,
+				4434652510A5F4FB94F682FF /* UI */,
+				6ABC1BC52C70831D5690674B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10546C5ACF3CD00C86B518C9 /* ZakkaPadUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 707497E125BB2BEF2642447C /* Build configuration list for PBXNativeTarget "ZakkaPadUITests" */;
+			buildPhases = (
+				0E4FF2E449AB6CA7C9A54899 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9EEABD87D48BCA3FC596D41F /* PBXTargetDependency */,
+			);
+			name = ZakkaPadUITests;
+			packageProductDependencies = (
+			);
+			productName = ZakkaPadUITests;
+			productReference = A34BBF6755D13D95F20CA5AA /* ZakkaPadUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		E65E9AADA89334EA64C65391 /* ZakkaPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8106397522BEA60B12C1A78C /* Build configuration list for PBXNativeTarget "ZakkaPad" */;
+			buildPhases = (
+				C81C004FE4D496D1BDAA13D7 /* Sources */,
+				6F6266416EC9F19B6E0DD8DA /* Resources */,
+				1A5A2497503F9145583D573B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZakkaPad;
+			packageProductDependencies = (
+				D1FBFABA99607AA78C6ED005 /* ZakkaCore */,
+				ABFA64C58129EEBF5C863EFE /* ZakkaRaster */,
+			);
+			productName = ZakkaPad;
+			productReference = 567ED9167BE5E9E86CA2516F /* ZakkaPad.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A28AC0C1D5907FD38E818D05 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					10546C5ACF3CD00C86B518C9 = {
+						TestTargetID = E65E9AADA89334EA64C65391;
+					};
+				};
+			};
+			buildConfigurationList = CBFC75C4860A37310910CDE3 /* Build configuration list for PBXProject "ZakkaPad" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = D06C7F87DCA4F88DFC14F53E;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				FCE269955E32D98EF112259D /* XCLocalSwiftPackageReference "Packages/ZakkaCore" */,
+				B8DCA7F55909A91893768D32 /* XCLocalSwiftPackageReference "Packages/ZakkaRaster" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6ABC1BC52C70831D5690674B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E65E9AADA89334EA64C65391 /* ZakkaPad */,
+				10546C5ACF3CD00C86B518C9 /* ZakkaPadUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F6266416EC9F19B6E0DD8DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD9A3E552D0D0DEF7D286773 /* Assets.xcassets in Resources */,
+				9C96C8BEA34F01A3B2CFB843 /* ZakkaArtwork.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E4FF2E449AB6CA7C9A54899 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C771932C4A111AA067B73F34 /* LiveStudioTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C81C004FE4D496D1BDAA13D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B3B591881D648F31E6C9759 /* ArtworkEngine.swift in Sources */,
+				A196B3B3E78209865ABA71AA /* ArtworkMedia.swift in Sources */,
+				68FC4209F429D1897588EA8C /* ArtworkPipeline.swift in Sources */,
+				273ABC2F809DA92F5A1C34AA /* ArtworkRaster.swift in Sources */,
+				F6AAC9EBA223BD0A57B946CC /* Books.swift in Sources */,
+				34225ACDBBB0B4691AB0BE2F /* Design.swift in Sources */,
+				4E9B23739149C6DDB65C16C9 /* Editor.swift in Sources */,
+				1FAA18E956369D99A4DCFF9D /* Export.swift in Sources */,
+				2BE5F171BEC34C72713EDD64 /* Grid.swift in Sources */,
+				B4B577827CA3FC2465AF179A /* PageArtwork.swift in Sources */,
+				FF70443EC822B2AA47517D09 /* Photos.swift in Sources */,
+				6203CC2BA5F10077318535B5 /* Settings.swift in Sources */,
+				A8FE45E56483DE6E69D1B4F3 /* Studio.swift in Sources */,
+				5A04F1CD908A035BC7B1850F /* ZakkaPad.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9EEABD87D48BCA3FC596D41F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E65E9AADA89334EA64C65391 /* ZakkaPad */;
+			targetProxy = 4C3736C55EAA8BA4DA4DB53B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		18D3A365E6B29DF67D268B26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zakka.ZakkaPad.UITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZakkaPad;
+			};
+			name = Debug;
+		};
+		54074EAA84003039B2CAE5EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		7418733C250BA36F377B4B16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		9AA4DB5403FC6C375B77F390 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zakka.ZakkaPad;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BEB7D022653C5DDD81753D42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zakka.ZakkaPad;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F511806A0BD6C6DA0C4491EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zakka.ZakkaPad.UITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZakkaPad;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		707497E125BB2BEF2642447C /* Build configuration list for PBXNativeTarget "ZakkaPadUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18D3A365E6B29DF67D268B26 /* Debug */,
+				F511806A0BD6C6DA0C4491EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8106397522BEA60B12C1A78C /* Build configuration list for PBXNativeTarget "ZakkaPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEB7D022653C5DDD81753D42 /* Debug */,
+				9AA4DB5403FC6C375B77F390 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CBFC75C4860A37310910CDE3 /* Build configuration list for PBXProject "ZakkaPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7418733C250BA36F377B4B16 /* Debug */,
+				54074EAA84003039B2CAE5EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		B8DCA7F55909A91893768D32 /* XCLocalSwiftPackageReference "Packages/ZakkaRaster" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/ZakkaRaster;
+		};
+		FCE269955E32D98EF112259D /* XCLocalSwiftPackageReference "Packages/ZakkaCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/ZakkaCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ABFA64C58129EEBF5C863EFE /* ZakkaRaster */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ZakkaRaster;
+		};
+		D1FBFABA99607AA78C6ED005 /* ZakkaCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ZakkaCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A28AC0C1D5907FD38E818D05 /* Project object */;
+}

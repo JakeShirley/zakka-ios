@@ -1,0 +1,2 @@
+# esbuild output includes significant whitespace inside dependency template strings.
+ZakkaArtwork.bundle/engine.js linguist-generated=true -whitespace

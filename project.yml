@@ -1,0 +1,57 @@
+name: ZakkaPad
+options:
+  deploymentTarget:
+    iOS: "27.0"
+packages:
+  ZakkaCore:
+    path: Packages/ZakkaCore
+  ZakkaRaster:
+    path: Packages/ZakkaRaster
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    TARGETED_DEVICE_FAMILY: 2
+    MARKETING_VERSION: 0.1.0
+    CURRENT_PROJECT_VERSION: 1
+targets:
+  ZakkaPad:
+    type: application
+    platform: iOS
+    sources: [App]
+    dependencies:
+      - package: ZakkaCore
+      - package: ZakkaRaster
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: Zakka
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+        NSLocalNetworkUsageDescription: Connect to the Zakka server you choose on your local network.
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.zakka.ZakkaPad
+      ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+  ZakkaPadUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [Tests/UI]
+    dependencies:
+      - target: ZakkaPad
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.zakka.ZakkaPad.UITests
+      GENERATE_INFOPLIST_FILE: YES
+schemes:
+  ZakkaPad:
+    build:
+      targets:
+        ZakkaPad: all
+    test:
+      targets: [ZakkaPadUITests]
